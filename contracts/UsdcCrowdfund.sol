@@ -66,7 +66,7 @@ contract usdcCrowdfund {
         uint256 _target,
         uint256 _starttime,
         uint256 _endtime
-    ) public returns (bool) {
+    ) public {
         uint256 starting = block.timestamp + (_starttime * 1 minutes);
         uint256 ending = starting + (_endtime * 1 minutes);
         uint256 target = _target * (10**6);
@@ -89,7 +89,6 @@ contract usdcCrowdfund {
             Raised: 0,
             Withdrawn: false
         });
-        return true;
     }
 
     // function to pledge to a prticular campaign.
